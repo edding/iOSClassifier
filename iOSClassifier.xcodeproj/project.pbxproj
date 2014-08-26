@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		32ACC24034674F0FB6C51436 /* libPods-iOSClassifier.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1C53A625669342ACAE96BB00 /* libPods-iOSClassifier.a */; };
 		6675137A19AC1FBE001D81C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6675137919AC1FBE001D81C0 /* Foundation.framework */; };
 		6675137C19AC1FBE001D81C0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6675137B19AC1FBE001D81C0 /* CoreGraphics.framework */; };
 		6675137E19AC1FBE001D81C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6675137D19AC1FBE001D81C0 /* UIKit.framework */; };
@@ -14,13 +15,17 @@
 		6675138619AC1FBE001D81C0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6675138519AC1FBE001D81C0 /* main.m */; };
 		6675138A19AC1FBE001D81C0 /* DJRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6675138919AC1FBE001D81C0 /* DJRAppDelegate.m */; };
 		6675138D19AC1FBE001D81C0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6675138B19AC1FBE001D81C0 /* Main.storyboard */; };
-		6675139019AC1FBE001D81C0 /* DJRViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6675138F19AC1FBE001D81C0 /* DJRViewController.m */; };
 		6675139219AC1FBE001D81C0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6675139119AC1FBE001D81C0 /* Images.xcassets */; };
 		6675139919AC1FBE001D81C0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6675139819AC1FBE001D81C0 /* XCTest.framework */; };
 		6675139A19AC1FBE001D81C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6675137919AC1FBE001D81C0 /* Foundation.framework */; };
 		6675139B19AC1FBE001D81C0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6675137D19AC1FBE001D81C0 /* UIKit.framework */; };
 		667513A319AC1FBE001D81C0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 667513A119AC1FBE001D81C0 /* InfoPlist.strings */; };
 		667513A519AC1FBE001D81C0 /* iOSClassifierTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 667513A419AC1FBE001D81C0 /* iOSClassifierTests.m */; };
+		667513B819AC2094001D81C0 /* DJRFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 667513AF19AC2094001D81C0 /* DJRFirstViewController.m */; };
+		667513B919AC2094001D81C0 /* DJRSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 667513B119AC2094001D81C0 /* DJRSecondViewController.m */; };
+		667513BA19AC2094001D81C0 /* DJRSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 667513B319AC2094001D81C0 /* DJRSocket.m */; };
+		667513BB19AC2094001D81C0 /* MZCroppableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 667513B519AC2094001D81C0 /* MZCroppableView.m */; };
+		667513BC19AC2094001D81C0 /* UIBezierPath-Points.m in Sources */ = {isa = PBXBuildFile; fileRef = 667513B719AC2094001D81C0 /* UIBezierPath-Points.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1C53A625669342ACAE96BB00 /* libPods-iOSClassifier.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-iOSClassifier.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C2B4EAD8DB646AA964B8B64 /* Pods-iOSClassifier.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSClassifier.xcconfig"; path = "Pods/Pods-iOSClassifier.xcconfig"; sourceTree = "<group>"; };
 		6675137619AC1FBE001D81C0 /* iOSClassifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSClassifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6675137919AC1FBE001D81C0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		6675137B19AC1FBE001D81C0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -45,14 +52,22 @@
 		6675138819AC1FBE001D81C0 /* DJRAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJRAppDelegate.h; sourceTree = "<group>"; };
 		6675138919AC1FBE001D81C0 /* DJRAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DJRAppDelegate.m; sourceTree = "<group>"; };
 		6675138C19AC1FBE001D81C0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6675138E19AC1FBE001D81C0 /* DJRViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DJRViewController.h; sourceTree = "<group>"; };
-		6675138F19AC1FBE001D81C0 /* DJRViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DJRViewController.m; sourceTree = "<group>"; };
 		6675139119AC1FBE001D81C0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6675139719AC1FBE001D81C0 /* iOSClassifierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSClassifierTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6675139819AC1FBE001D81C0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		667513A019AC1FBE001D81C0 /* iOSClassifierTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOSClassifierTests-Info.plist"; sourceTree = "<group>"; };
 		667513A219AC1FBE001D81C0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		667513A419AC1FBE001D81C0 /* iOSClassifierTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOSClassifierTests.m; sourceTree = "<group>"; };
+		667513AE19AC2094001D81C0 /* DJRFirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJRFirstViewController.h; sourceTree = "<group>"; };
+		667513AF19AC2094001D81C0 /* DJRFirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJRFirstViewController.m; sourceTree = "<group>"; };
+		667513B019AC2094001D81C0 /* DJRSecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJRSecondViewController.h; sourceTree = "<group>"; };
+		667513B119AC2094001D81C0 /* DJRSecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJRSecondViewController.m; sourceTree = "<group>"; };
+		667513B219AC2094001D81C0 /* DJRSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DJRSocket.h; sourceTree = "<group>"; };
+		667513B319AC2094001D81C0 /* DJRSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DJRSocket.m; sourceTree = "<group>"; };
+		667513B419AC2094001D81C0 /* MZCroppableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MZCroppableView.h; sourceTree = "<group>"; };
+		667513B519AC2094001D81C0 /* MZCroppableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MZCroppableView.m; sourceTree = "<group>"; };
+		667513B619AC2094001D81C0 /* UIBezierPath-Points.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBezierPath-Points.h"; sourceTree = "<group>"; };
+		667513B719AC2094001D81C0 /* UIBezierPath-Points.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBezierPath-Points.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +78,7 @@
 				6675137C19AC1FBE001D81C0 /* CoreGraphics.framework in Frameworks */,
 				6675137E19AC1FBE001D81C0 /* UIKit.framework in Frameworks */,
 				6675137A19AC1FBE001D81C0 /* Foundation.framework in Frameworks */,
+				32ACC24034674F0FB6C51436 /* libPods-iOSClassifier.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,6 +102,7 @@
 				6675139E19AC1FBE001D81C0 /* iOSClassifierTests */,
 				6675137819AC1FBE001D81C0 /* Frameworks */,
 				6675137719AC1FBE001D81C0 /* Products */,
+				4C2B4EAD8DB646AA964B8B64 /* Pods-iOSClassifier.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,6 +122,7 @@
 				6675137B19AC1FBE001D81C0 /* CoreGraphics.framework */,
 				6675137D19AC1FBE001D81C0 /* UIKit.framework */,
 				6675139819AC1FBE001D81C0 /* XCTest.framework */,
+				1C53A625669342ACAE96BB00 /* libPods-iOSClassifier.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -112,11 +130,10 @@
 		6675137F19AC1FBE001D81C0 /* iOSClassifier */ = {
 			isa = PBXGroup;
 			children = (
-				6675138819AC1FBE001D81C0 /* DJRAppDelegate.h */,
-				6675138919AC1FBE001D81C0 /* DJRAppDelegate.m */,
+				667513C019AC2B86001D81C0 /* CroppableView */,
+				667513BF19AC2B6C001D81C0 /* AppDelegate */,
+				667513BD19AC2B46001D81C0 /* ViewController */,
 				6675138B19AC1FBE001D81C0 /* Main.storyboard */,
-				6675138E19AC1FBE001D81C0 /* DJRViewController.h */,
-				6675138F19AC1FBE001D81C0 /* DJRViewController.m */,
 				6675139119AC1FBE001D81C0 /* Images.xcassets */,
 				6675138019AC1FBE001D81C0 /* Supporting Files */,
 			);
@@ -126,6 +143,7 @@
 		6675138019AC1FBE001D81C0 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				667513BE19AC2B5C001D81C0 /* Socket */,
 				6675138119AC1FBE001D81C0 /* iOSClassifier-Info.plist */,
 				6675138219AC1FBE001D81C0 /* InfoPlist.strings */,
 				6675138519AC1FBE001D81C0 /* main.m */,
@@ -152,6 +170,46 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		667513BD19AC2B46001D81C0 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				667513AE19AC2094001D81C0 /* DJRFirstViewController.h */,
+				667513AF19AC2094001D81C0 /* DJRFirstViewController.m */,
+				667513B019AC2094001D81C0 /* DJRSecondViewController.h */,
+				667513B119AC2094001D81C0 /* DJRSecondViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		667513BE19AC2B5C001D81C0 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				667513B219AC2094001D81C0 /* DJRSocket.h */,
+				667513B319AC2094001D81C0 /* DJRSocket.m */,
+			);
+			name = Socket;
+			sourceTree = "<group>";
+		};
+		667513BF19AC2B6C001D81C0 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				6675138819AC1FBE001D81C0 /* DJRAppDelegate.h */,
+				6675138919AC1FBE001D81C0 /* DJRAppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		667513C019AC2B86001D81C0 /* CroppableView */ = {
+			isa = PBXGroup;
+			children = (
+				667513B419AC2094001D81C0 /* MZCroppableView.h */,
+				667513B519AC2094001D81C0 /* MZCroppableView.m */,
+				667513B619AC2094001D81C0 /* UIBezierPath-Points.h */,
+				667513B719AC2094001D81C0 /* UIBezierPath-Points.m */,
+			);
+			name = CroppableView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -159,9 +217,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 667513A819AC1FBE001D81C0 /* Build configuration list for PBXNativeTarget "iOSClassifier" */;
 			buildPhases = (
+				510998EB31C74B10AEE51D03 /* Check Pods Manifest.lock */,
 				6675137219AC1FBE001D81C0 /* Sources */,
 				6675137319AC1FBE001D81C0 /* Frameworks */,
 				6675137419AC1FBE001D81C0 /* Resources */,
+				0C86937925E44D8AB7410D60 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,13 +305,50 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C86937925E44D8AB7410D60 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-iOSClassifier-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		510998EB31C74B10AEE51D03 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6675137219AC1FBE001D81C0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				667513B919AC2094001D81C0 /* DJRSecondViewController.m in Sources */,
 				6675138619AC1FBE001D81C0 /* main.m in Sources */,
-				6675139019AC1FBE001D81C0 /* DJRViewController.m in Sources */,
+				667513BA19AC2094001D81C0 /* DJRSocket.m in Sources */,
+				667513B819AC2094001D81C0 /* DJRFirstViewController.m in Sources */,
+				667513BB19AC2094001D81C0 /* MZCroppableView.m in Sources */,
+				667513BC19AC2094001D81C0 /* UIBezierPath-Points.m in Sources */,
 				6675138A19AC1FBE001D81C0 /* DJRAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -374,6 +471,7 @@
 		};
 		667513A919AC1FBE001D81C0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C2B4EAD8DB646AA964B8B64 /* Pods-iOSClassifier.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -387,6 +485,7 @@
 		};
 		667513AA19AC1FBE001D81C0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C2B4EAD8DB646AA964B8B64 /* Pods-iOSClassifier.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
@@ -457,6 +556,7 @@
 				667513AA19AC1FBE001D81C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		667513AB19AC1FBE001D81C0 /* Build configuration list for PBXNativeTarget "iOSClassifierTests" */ = {
 			isa = XCConfigurationList;
@@ -465,6 +565,7 @@
 				667513AD19AC1FBE001D81C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
