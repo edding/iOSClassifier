@@ -13,13 +13,12 @@
 #import <arpa/inet.h>
 #import <sys/ioctl.h>
 
-//
+#define BUFFER_SIZE                  8192
 //  BUFFER_SIZE indicate the size of a socket buffer
-//  Please customized the settings for your own test
-//
+
+//  Here you can modify the settings on you won
 #define IP_ADDR                      "127.0.0.1"
 #define HELLO_WORLD_SERVER_PORT      10000
-#define BUFFER_SIZE                  8192
 #define TIME_OUT                     5
 
 //
