@@ -15,9 +15,7 @@
 
 //
 //  BUFFER_SIZE indicate the size of a socket buffer
-//  By default it is 8192, you may change it, but make sure
-//  that it fits the speed of transmission and the buffer size
-//  of the server
+//  Please customized the settings for your own test
 //
 #define IP_ADDR                      "127.0.0.1"
 #define HELLO_WORLD_SERVER_PORT      10000
