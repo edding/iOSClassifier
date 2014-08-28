@@ -14,10 +14,13 @@ iOSClassifier contains many third party libraries which are managed through coco
 
 > ->AMSmoothAlert<br>
 > ->GPUImage<br>
-> ->MBProgressHUD
+> ->MBProgressHUD<br>
+> ->MZCroppableView
 
 Warning: AMSmoothAlert depends on GPUImage, who does NOT support 64bit devices.
 If this project cannot build successfully on your devices, install cocoapods and use `pod update`
+
+Claim: MZCroppableView has been modified alot, including adding some touchEvent as well as a new function for adding mask to the existing image view according to the path you draw. This function will add a mask that highlight the part you are interested in.
 
 How to use
 --------------
@@ -38,10 +41,8 @@ How to use
 Functions to be added later
 ----------------------
 
-This version of iOSClassifier is only a beta1 version. A lot more functions are to be added.
-The 'crop by draw' function has not be written actually, which means the image been uploaded to the server for analysis are the raw picture, not the one cropped by your free drawing. But it will be added later.
-
-Still, we do not have a setting interface.
+This version of iOSClassifier is only a beta1 version.
+More functions and user settings are to be added soon.
 
 Video Demo
 --------------------
