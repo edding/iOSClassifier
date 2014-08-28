@@ -88,13 +88,12 @@
     } else {
         
         // Convert Pic into NSData
-        // !!!!!!!!! NEED TO BE CHANGED !!!!!!!!!!!
-        //
         NSData *data;
-        if (UIImagePNGRepresentation(_selectedImage) == nil) {
-            data = UIImageJPEGRepresentation(_selectedImage, 1.0);
+        UIImage *savedImage = [croppableView deleteBackgroundOf:_imageView];
+        if (UIImagePNGRepresentation(savedImage) == nil) {
+            data = UIImageJPEGRepresentation(savedImage, 1.0);
         } else {
-            data = UIImagePNGRepresentation(_selectedImage);
+            data = UIImagePNGRepresentation(savedImage);
         }
         
         // Save picture in the 'tmp' folder for uploading
@@ -220,8 +219,7 @@
     // check whether the first touch point is located in image view frame
     // only respond to those circles that start with a poin within the frame
     if (CGRectContainsPoint(imageViewFrame, firstTouchPoint)) {
-        NSLog(@"here");
-        UIImage *maskedImage = [croppableView deleteBackgroundOfImage:_imageView];
+        UIImage *maskedImage = [croppableView setMaskFor:_imageView];
         [_imageView setImage:maskedImage];
     }
 }

@@ -16,8 +16,8 @@
 #define BUFFER_SIZE                  8192
 //  BUFFER_SIZE indicate the size of a socket buffer
 
-//  Here you can modify the settings on you won
-#define IP_ADDR                      "127.0.0.1"
+//  Here you can modify the settings on you own
+#define IP_ADDR                      "159.226.179.239"
 #define HELLO_WORLD_SERVER_PORT      10000
 #define TIME_OUT                     5
 

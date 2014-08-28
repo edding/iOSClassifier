@@ -72,7 +72,7 @@
     [self.lineColor setStroke];
     [self.croppingPath strokeWithBlendMode:kCGBlendModeNormal alpha:1.0f];
 }
-- (UIImage *)deleteBackgroundOfImage:(UIImageView *)image
+- (UIImage *)setMaskFor:(UIImageView *)image
 {
     NSArray *points = [self.croppingPath points];
     
@@ -133,6 +133,69 @@
     //    CGImageRef imageRef = CGImageCreateWithImageInRect(maskedImage.CGImage, croppedRect);
     //
     //    maskedImage = [UIImage imageWithCGImage:imageRef];
+    
+    return maskedImage;
+}
+
+- (UIImage *)deleteBackgroundOf:(UIImageView *)image {
+    NSArray *points = [self.croppingPath points];
+    
+    // When no lines are drawn, the image will not be modified
+    if (points.count == 0) {
+        return image.image;
+    }
+    
+    CGRect rect = CGRectZero;
+    rect.size = image.image.size;
+    
+    UIBezierPath *aPath;
+    UIGraphicsBeginImageContextWithOptions(rect.size, YES, 0.0);
+    {
+        //[[UIColor blackColor] setFill];
+        [[UIColor blackColor] setFill];
+        UIRectFill(rect);
+        [[UIColor whiteColor] setFill];
+        
+        aPath = [UIBezierPath bezierPath];
+        
+        // Set the starting point of the shape.
+        CGPoint p1 = [MZCroppableView convertCGPoint:[[points objectAtIndex:0] CGPointValue] fromRect1:image.frame.size toRect2:image.image.size];
+        [aPath moveToPoint:CGPointMake(p1.x, p1.y)];
+        
+        for (uint i=1; i<points.count; i++)
+        {
+            CGPoint p = [MZCroppableView convertCGPoint:[[points objectAtIndex:i] CGPointValue] fromRect1:image.frame.size toRect2:image.image.size];
+            [aPath addLineToPoint:CGPointMake(p.x, p.y)];
+        }
+        [aPath closePath];
+        [aPath fill];
+    }
+    
+    UIImage *mask = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    UIGraphicsBeginImageContextWithOptions(rect.size, NO, 0.0);
+    
+    {
+        CGContextClipToMask(UIGraphicsGetCurrentContext(), rect, mask.CGImage);
+        [image.image drawAtPoint:CGPointZero];
+    }
+    
+    UIImage *maskedImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    //Crop the picture to the bounds of the path
+    CGRect croppedRect = aPath.bounds;
+    croppedRect.origin.y = rect.size.height - CGRectGetMaxY(aPath.bounds);
+    //This because mask become inverse of the actual image;
+
+    croppedRect.origin.x = croppedRect.origin.x*2;
+    croppedRect.origin.y = croppedRect.origin.y*2;
+    croppedRect.size.width = croppedRect.size.width*2;
+    croppedRect.size.height = croppedRect.size.height*2;
+
+    CGImageRef imageRef = CGImageCreateWithImageInRect(maskedImage.CGImage, croppedRect);
+    maskedImage = [UIImage imageWithCGImage:imageRef];
     
     return maskedImage;
 }

@@ -10,8 +10,12 @@
 //  For more details please check: https://github.com/mzeeshanid/MZCroppableView
 
 //  Edited by JIARUI DING
-//  inorder to make it work for my project, I've modified the touch ended and touched moved
-//  event, as well as adding a mask to the picture
+//  inorder to make it work for my project, I've modified touch ended and touched moved
+//  event.
+//  Also, a new function:
+//  (UIImage *)setMaskFor:(UIImageView *)image
+//  has been added to the original version, to ad a transparent mask view above
+//  the main imageView
 
 #import <UIKit/UIKit.h>
 
@@ -26,5 +30,7 @@
 + (CGPoint)convertPoint:(CGPoint)point1 fromRect1:(CGSize)rect1 toRect2:(CGSize)rect2;
 + (CGRect)scaleRespectAspectFromRect1:(CGRect)rect1 toRect2:(CGRect)rect2;
 
-- (UIImage *)deleteBackgroundOfImage:(UIImageView *)image;
+- (UIImage *)setMaskFor:(UIImageView *)image;
+
+- (UIImage *)deleteBackgroundOf:(UIImageView *)image;
 @end
