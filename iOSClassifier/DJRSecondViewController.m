@@ -90,6 +90,24 @@
         // Convert Pic into NSData
         NSData *data;
         UIImage *savedImage = [croppableView deleteBackgroundOf:_imageView];
+        
+        if (savedImage == nil) {
+            // when there is no line drawn by the user, notify the server to
+            // use OVERSAMPLE mode, inorder to enhace the accuracy
+            savedImage = _imageView.image;
+            
+            memset(buf, 0, sizeof(buf));
+            sprintf(buf, "%s","OVERSAMPLE_TRUE");
+            [socket send:buf withSize:1024];
+        } else {
+            // notify the server to set OVERSAMPLE as false, as the user
+            // has cricled the interested spot.
+            memset(buf, 0, sizeof(buf));
+            sprintf(buf, "%s","OVERSAMPLE_FALSE");
+            [socket send:buf withSize:1024];
+        }
+
+        
         if (UIImagePNGRepresentation(savedImage) == nil) {
             data = UIImageJPEGRepresentation(savedImage, 1.0);
         } else {
@@ -98,7 +116,7 @@
         
         // Save picture in the 'tmp' folder for uploading
         NSString * DocumentsPath = [NSHomeDirectory() stringByAppendingPathComponent:@"tmp"];
-        filePath = [[NSString alloc]initWithFormat:@"%@%@",DocumentsPath,@"/image.png"];
+        filePath = [[NSString alloc]initWithFormat:@"%@%@",DocumentsPath,@"/image.jpg"];
         NSFileManager *fileManager = [NSFileManager defaultManager];
         [fileManager createFileAtPath:filePath contents:data attributes:nil];
         

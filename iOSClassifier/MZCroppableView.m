@@ -140,9 +140,9 @@
 - (UIImage *)deleteBackgroundOf:(UIImageView *)image {
     NSArray *points = [self.croppingPath points];
     
-    // When no lines are drawn, the image will not be modified
+    // When no lines are drawn, return nil to notify the controller
     if (points.count == 0) {
-        return image.image;
+        return nil;
     }
     
     CGRect rect = CGRectZero;
